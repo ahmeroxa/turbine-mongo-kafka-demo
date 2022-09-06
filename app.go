@@ -42,10 +42,7 @@ func (a App) Run(v turbine.Turbine) error {
 
 	// write out the resulting records into the collection (or __Topic__ in the case of Kafka). In this case I'm writing
 	// out to the Topic "interesting_events".
-	err = dest.WriteWithConfig(res, "interesting_events", []turbine.ResourceConfig{
-		{"conduit", "true"},
-		{"topic", "interesting_events"},
-	})
+	err = dest.WriteWithConfig(res, "interesting_events", nil)
 	if err != nil {
 		return err
 	}

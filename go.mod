@@ -4,6 +4,8 @@ go 1.18
 
 require github.com/meroxa/turbine-go v0.0.0-20220826151950-0de76598d622
 
+replace github.com/meroxa/turbine-go => ../turbine-go
+
 require (
 	github.com/caarlos0/env/v6 v6.9.3 // indirect
 	github.com/cristalhq/jwt/v3 v3.1.0 // indirect
