@@ -127,7 +127,6 @@ func parseEventRecord(r turbine.Record) (Event, error) {
 	if err != nil {
 		return Event{}, err
 	}
-	log.Printf("CDC Record: %+v", cdcRec)
 	log.Printf("After: %s", cdcRec.Payload.After)
 	var ev Event
 	err = json.Unmarshal([]byte(cdcRec.Payload.After), &ev)
