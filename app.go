@@ -71,11 +71,14 @@ func (f FilterInteresting) Process(stream []turbine.Record) []turbine.Record {
 		}
 	}
 
-	recs, err := encodeEvents(interestingEvents)
-	if err != nil {
-		log.Printf("error: %s", err.Error())
+	if len(interestingEvents) > 0 {
+		recs, err := encodeEvents(interestingEvents)
+		if err != nil {
+			log.Printf("error: %s", err.Error())
+		}
+		return recs
 	}
-	return recs
+	return []turbine.Record{}
 }
 
 // Event represents the Event document stored in MongoDB.
