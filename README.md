@@ -17,7 +17,7 @@ Example MongoDB Document:
 	"user_id": "100",
 	"activity": "user logged in",
 	"vip": true,
-	"created_at": 1662568354,
-	"updated_at": 1662568354
+	"created_at": "1662568354",
+	"updated_at": "1662568354"
 }
 ```
